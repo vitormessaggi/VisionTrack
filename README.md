@@ -53,8 +53,4 @@ Este repositório contém o código-fonte do **Vision Track**, uma plataforma co
 - **Comunicação:** Consumo de dados via `JSON` e upload de arquivos utilizando `multipart/form-data`.
 - **Infraestrutura:** Totalmente conteinerizado com **Docker**, operando com containers separados para Front-end, Back-end e Banco de Dados.
 
-## ⚙️ Como Executar (Docker)
-
-*(Adicione aqui as instruções para subir os containers, por exemplo: `docker-compose up -d`)*
-
 </readme>
