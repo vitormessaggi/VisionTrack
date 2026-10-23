@@ -1,9 +1,13 @@
-import Image from "next/image";
+import { ArrowFunction, PrimeiroComponente } from "../components/PrimeiroComponente";
 
 export default function Home() {
   return (
-    <main>
-      Minha primeira pagina usando NextJS
-    </main>
+    <>
+      <PrimeiroComponente 
+      mensagem="Olá, esta mensagem estou passando um parâmetro. Clique aqui!"
+      mensagemBotao="Essa é a mensagem do botão"/>
+      <ArrowFunction/>
+    </>
+
   );
 }
