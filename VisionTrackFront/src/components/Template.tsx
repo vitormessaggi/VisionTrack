@@ -16,9 +16,9 @@ export const Template: React.FC<TemplateProps> = (props: TemplateProps) => {
 
 const Header: React.FC = () =>{
     return(
-        <header className="bg-red-600 text-white py-3">
+        <header className="bg-blue-900 text-white py-3">
             <div className="container mx-auto flex items-center justify-between px-4">
-                <h1 className="text-3x1 font-bold">Imagem Peças</h1>
+                <h1 className="text-3x1 font-bold">Catálogo de Peças</h1>
             </div>
         </header>
     )
@@ -26,9 +26,9 @@ const Header: React.FC = () =>{
 
 const Footer: React.FC = () =>{
     return(
-        <footer className="bg-red-600 text-white py-4 mt-8">
+        <footer className="bg-blue-900 text-white py-4 mt-8">
             <div className="container mx-auto text-center">
-                Desenvolvido por Luiz Lozano
+                Vision Track Systens
             </div>
         </footer>
     )

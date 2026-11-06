@@ -13,6 +13,6 @@ public class ImageDTO {
     private String extension;
     private Long size;
     private LocalDate uploadDate;
-
-
 }
+
+
