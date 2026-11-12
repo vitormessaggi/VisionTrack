@@ -8,11 +8,13 @@ import { useState } from 'react';
 export default function GaleriaPage(){
     const useService = useImageService();
     const [images, setImages] = useState<Image[]>([]);
+    const [query, setQuery] = useState<string>("");
+    const [extension, setExtension] = useState<string>("");
 
     async function searchImages(){
-        const result = await useService.buscar();
-        setImages(result)
-        console.table(result);
+        console.log("Valor digitado:", query);
+        const result = await useService.buscar(query, extension);
+        setImages(result);
     }
 
     function renderImageCard(image: Image){ //Gera um card
@@ -34,9 +36,14 @@ export default function GaleriaPage(){
         <Template>
             <section className='flex flex-col items-center justify-center my-3'>
                 <div className='flex space-x-4'>
-                    <input type = "text" className='border px-5 py-2 rounded-lg text-gray-900'/>
-                    <select className="border px-4 py-2 rounded-lg text-gray-900">
+                    <input type = "text" 
+                    onChange={event => setQuery(event.target.value)}
+                    className='border px-5 py-2 rounded-lg text-gray-900'/>
+                    <select onChange={event => setExtension(event.target.value)} className="border px-4 py-2 rounded-lg text-gray-900">
                         <option value="">All Formats</option>
+                        <option value="jpg">JPG</option>
+                        <option value="png">PNG</option>
+                        <option value="gif">GIF</option>
                     </select>
                     <button onClick={searchImages} className="bg-red-500 text-white px-4 py-2 rounded-lg">Seach</button>
                     <button className="bg-yellow-500 text-white px-4 py-2 rounded-lg">Add New</button>
